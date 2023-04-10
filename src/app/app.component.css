@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding-top: 50px; /* set to the height of the navbar */
+    padding-bottom: 50px; /* set to the height of the footer */
+  }
+  
+.wrapper {
+    height: calc(100vh - 100px); /* set to the total height of the navbar and footer */
+    overflow-y: auto;
+}

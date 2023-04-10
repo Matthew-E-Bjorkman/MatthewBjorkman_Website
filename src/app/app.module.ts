@@ -11,6 +11,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 import { WIPComponent } from './elements/wip/wip.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     NavbarComponent,
-    WIPComponent
+    WIPComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
