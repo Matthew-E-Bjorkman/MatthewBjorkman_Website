@@ -1,0 +1,39 @@
+/* Set the wrapper to display its contents as a flexbox and have a maximum height of 100% */
+.wrapper {
+    display: flex;
+    max-height: 100%;
+}
+
+/* Set the left-sidebar to take up 40% of the parent container's width, be the same height as its parent container, and have a fixed position with vertical scrolling enabled */
+.left-sidebar {
+    flex: 0 0 40%; 
+    height: 100%;
+    width: 40%;
+    position: fixed; 
+    overflow-y: auto; 
+}
+
+/* Set the main-content to take up the remaining 60% of the parent container's width, have a margin on the left equal to the width of the left-sidebar, and enable vertical scrolling */
+.main-content {
+    flex: 1; 
+    margin-left: 40%; 
+    overflow-y: auto; 
+    position: relative;    
+}
+
+/* Set the separator to have a fixed position, stretch from the top to the bottom of the page, have a width of 1%, and have a dark gray background color */
+.separator {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    width: 1%; 
+    background-color: #333; 
+    z-index: 9999;
+}
+
+/* Set the main-body to have a relative position, move it 2% to the left, and limit its maximum width to 98% of its parent container's width */
+.main-body {
+    position: relative;
+    left: 2%;
+    max-width: 98%;
+}
