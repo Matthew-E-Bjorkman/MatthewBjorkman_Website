@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { NavbarComponent } from './navbar/navbar.component';
+import { AppConfigService } from './services/app-config/app-config.service';
+import { EmailGeneratorService } from './services/email-generator/email-generator.service';
 
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { NavbarComponent } from './ui/navbar/navbar.component';
 
-import { WIPComponent } from './elements/wip/wip.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './ui/pages/home/home.component';
+import { AboutComponent } from './ui/pages/about/about.component';
+import { ContactComponent } from './ui/pages/contact/contact.component';
+
+import { WIPComponent } from './ui/elements/wip/wip.component';
+import { FooterComponent } from './ui/footer/footer.component';
+import { EmailFormComponent } from './ui/elements/email-form/email-form.component';
 
 
 const routes: Routes = [
@@ -29,14 +35,24 @@ const routes: Routes = [
     ContactComponent,
     NavbarComponent,
     WIPComponent,
-    FooterComponent
+    FooterComponent,
+    EmailFormComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy }
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (appConfigService: AppConfigService) => () => appConfigService.loadConfig(),
+      deps: [AppConfigService],
+      multi: true
+    },
+    EmailGeneratorService
   ],
   bootstrap: [AppComponent]
 })
