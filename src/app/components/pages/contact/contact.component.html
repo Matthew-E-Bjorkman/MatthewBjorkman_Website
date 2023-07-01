@@ -1,0 +1,29 @@
+<div class="header">
+    <label class="header-title">Contact Me</label>
+    <label class="header-text">Send me a message here or email me at <strong>matthewbjorkmanwork@gmail.com</strong></label>
+</div>
+
+<form (ngSubmit)="form.valid && submitContactForm()" [formGroup]="form" class="input-form"> 
+    <label class="form-control-label">Name:</label>
+    <input type="text" class="form-control" placeholder="Name" formControlName="name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="contact-alert alert alert-danger">
+        <div *ngIf="name.errors?.['required']">Name is required.</div>
+    </div>
+
+    <label class="form-control-label">Email:</label>
+    <input type="email" class="form-control" placeholder="Email" formControlName="email">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="contact-alert alert alert-danger">
+        <div *ngIf="email.errors?.['required']">Email is required.</div>
+        <div *ngIf="email.errors?.['email']">A valid email is required.</div>
+    </div>
+
+    <label class="form-control-label">Message:</label>
+    <input type="text" class="form-control" placeholder="Message" formControlName="message">
+    <div *ngIf="message.invalid && (message.dirty || message.touched)" class="contact-alert alert alert-danger">
+        <div *ngIf="message.errors?.['required']">Message is required.</div>
+    </div>
+
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
