@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { AppConfigService } from './services/app-config/app-config.service';
 import { DirectAccessGuard } from './guards/direct-access/direct-access.guard';
+import { ProjectCardComponent } from './components/elements/project-card/project-card/project-card.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,7 +35,8 @@ const routes: Routes = [
     NavbarComponent,
     WIPComponent,
     FooterComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

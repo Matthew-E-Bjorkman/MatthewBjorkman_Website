@@ -2,10 +2,105 @@
     <div class="container-block container-header">
         <strong>Here's some things I've worked on:</strong>
     </div>
-    <div style="border: 1px solid; width: 90vw; height: 50vh;" class="container-block">
-        <strong>About page is under construction</strong>
-    </div>
-    <a href="../../../../assets/documents/Matthew Bjorkman Resume.pdf" download class="link-container">
-        <label class="link">Download my resume (Last updated Nov'21)</label>
-    </a>
+    <div id="accordion" class="cards">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Personal Projects
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <app-project-card
+                    projDate="Project Date"
+                    projName="Project Name"
+                    projDesc="Description of Project"
+                    headerRow="true"
+                />
+                <hr />
+                <app-project-card
+                    imgPath="/assets/images/WebsiteImage.png"
+                    projDate="Jun'23"
+                    projName="Personal Website"
+                    projGitLink="https://github.com/Matthew-E-Bjorkman/MatthewBjorkman_Website"
+                    projDesc="The website you're looking at right now! This is something I've wanted to work on for a while 
+                            but didn't quite have the drive or technical knowledge to undertake. My career has been mostly rooted in back-end 
+                            technologies and languages so while I am a full-stack developer with functional HTML/CSS/JS language understanding 
+                            that's also about where my experience ended. This project was a way for me to undertake and learn Angular, Web Hosting, 
+                            and everything else that goes into publishing a website."
+                />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Professional Work
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <app-project-card
+                    projDate="Project Date"
+                    projName="Project Name"
+                    projDesc="Description of Project"
+                    headerRow="true"
+                />
+                <hr />
+                <app-project-card
+                    projDesc="To be filled out in the near future."
+                />
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Game Development
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <app-project-card
+                    projDate="Project Date"
+                    projName="Project Name"
+                    projDesc="Description of Project"
+                    headerRow="true"
+                />
+                <hr />
+                <app-project-card
+                    imgPath="/assets/images/2020GameJam.png"
+                    projDate="Summer 2020"
+                    projName="Super Happy Funland (GameJam)"
+                    projGitLink="https://github.com/Matthew-E-Bjorkman/2020_GameJam"
+                    projFile="/assets/files/2020_GameJam_Build.zip"
+                    projDesc="The second attempt at a game jam. This time I had gotten past the beginning learning phases of last year 
+                            and also had the help of another developer who was persuing a game development career in Denmark. 
+                            This time around it came out a much more fleshed out product that's actually pretty fun to play."
+                />
+                <hr />
+                <app-project-card
+                    imgPath="/assets/images/2019GameJam.png"
+                    projDate="Summer 2019"
+                    projName="TypeFormer (GameJam)"
+                    projGitLink="https://github.com/Matthew-E-Bjorkman/2019_GameJam"
+                    projFile="/assets/files/2019_GameJam_Build.zip"
+                    projDesc="My first real project that wasn't tied to a course curriculum. 
+                            While I had some help from artists for music, sound, and art assets I was the sole developer working on this project. 
+                            I had no experience with Unity yet and my C# knowledge was almost entirely academic 
+                            so this was a great learning experience (despite the game being quite poor ☺ )"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
 </div>

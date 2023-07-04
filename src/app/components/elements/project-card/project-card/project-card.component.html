@@ -1,0 +1,42 @@
+<!-- Header Row -->
+<div *ngIf="headerRow" class="row">
+    <div class="col-3">
+        <strong>{{projName}}</strong>
+        <br />
+        <i>{{projDate}}</i>
+    </div>
+    <div class="col-6">
+        <strong>{{projDesc}}</strong>
+    </div>
+    <div class="col-3">
+        <strong>Project Image</strong>
+    </div>
+</div>
+<!-- Body Row -->
+<div *ngIf="!headerRow" class="row">
+    <div class="col-3">
+        <div *ngIf="projName">
+            {{projName}} 
+            <br />
+            {{projDate}}
+        </div>
+        <a *ngIf="projGitLink" href="{{projGitLink}}" target="_blank">
+            GitHub Link
+        </a>
+        <br />
+        <a *ngIf="projFile" href="{{projFile}}" >
+            Download the Project
+        </a>
+        <div *ngIf="!projGitLink">
+            <div *ngIf="projName">
+                {{projName}} ({{projDate}})
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        {{projDesc}}
+    </div>
+    <div class="col-3">
+        <img *ngIf="imgPath" src="{{imgPath}}" alt="{{projName}}-Icon" class="image">
+    </div>
+</div>

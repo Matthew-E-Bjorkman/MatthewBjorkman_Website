@@ -7,19 +7,14 @@
     padding-top: 2vh;
 }
 
+.container .cards {
+    width: 100%;
+}
+
 .container-block {
     padding-top: 2vh;
 }
 
 .container-header {
     font-size: xx-large;
-}
-
-.link-container {
-    margin-top: 75vh;
-    position: fixed;
-}
-
-.link {
-    cursor: pointer;
 }
