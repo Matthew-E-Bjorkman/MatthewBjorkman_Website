@@ -1,20 +1,20 @@
 <!-- Header Row -->
 <div *ngIf="headerRow" class="row">
-    <div class="col-3">
+    <div class="col-sm">
         <strong>{{projName}}</strong>
         <br />
         <i>{{projDate}}</i>
     </div>
-    <div class="col-6">
+    <div class="col-sm">
         <strong>{{projDesc}}</strong>
     </div>
-    <div class="col-3">
+    <div class="col-sm">
         <strong>Project Image</strong>
     </div>
 </div>
 <!-- Body Row -->
 <div *ngIf="!headerRow" class="row">
-    <div class="col-3">
+    <div class="col-sm">
         <div *ngIf="projName">
             {{projName}} 
             <br />
@@ -33,10 +33,10 @@
             </div>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm">
         {{projDesc}}
     </div>
-    <div class="col-3">
+    <div class="col-sm">
         <img *ngIf="imgPath" src="{{imgPath}}" alt="{{projName}}-Icon" class="image">
     </div>
 </div>

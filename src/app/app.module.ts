@@ -11,13 +11,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { ThankYouComponent } from './components/pages/thank-you/thank-you/thank-you.component';
-import { WIPComponent } from './components/elements/wip/wip.component';
+import { ThankYouComponent } from './components/pages/thank-you/thank-you.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { AppConfigService } from './services/app-config/app-config.service';
 import { DirectAccessGuard } from './guards/direct-access/direct-access.guard';
-import { ProjectCardComponent } from './components/elements/project-card/project-card/project-card.component';
+import { ProjectCardComponent } from './components/elements/project-card/project-card.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +32,6 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     NavbarComponent,
-    WIPComponent,
     FooterComponent,
     ThankYouComponent,
     ProjectCardComponent

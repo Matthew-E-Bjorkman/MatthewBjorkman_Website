@@ -1,0 +1,156 @@
+@import "./colors.css";
+
+/* Variables */
+:root {
+    --header-footer-height: 50px;
+    --standard-spacing: 2vh;
+}
+
+/* Common */
+.app-body {
+    height: calc(100vh - var(--header-footer-height));
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: var(--header-footer-height);
+}
+
+.container .container-block {
+    padding-top: var(--standard-spacing);
+}
+  
+.container .container-header {
+    font-size: xx-large;
+}
+
+.container .card-list {
+    width: 100%;
+}
+
+.container .card-list .card-header {
+    background-color: var(--background-secondary);
+}
+
+.container .card-list .card-header .btn.btn-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.link {
+    cursor: pointer;
+}
+
+/* Navbar & Footer */
+.header-footer {
+    background-color: var(--background-secondary);
+    height: var(--header-footer-height);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.header-footer ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 20px;
+}
+
+.header-footer .icon a {
+    padding: 2px;
+}
+
+.header-footer .icon img {
+    height: 35px;
+    width: 35px;
+}
+
+
+/* AppComponent */
+/* HomeComponent */
+/* ThankYouComponent */
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+}
+
+.center-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.large {
+    font-size: x-large;
+}
+
+/* ContactComponenet */
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-form input,
+.input-form button {
+    margin-bottom: 10px;
+}
+
+.input-form label {
+    margin-top: 10px;
+    text-align: left;
+    width: 49%;
+}
+
+.input-form input {
+    width: 50%;
+}
+
+.input-form button {
+    width: 35%;
+}
+
+.input-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.contact-alert {
+    width: 50%;
+}
+
+
+/* AboutComponent */
+/* SharedCSS */
+/* FooterComponent */
+/* NavbarComponent */
+/* ProjectCardComponent */
+.image {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+}
