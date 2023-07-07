@@ -9,6 +9,7 @@
 /* Common */
 .app-body {
     height: calc(100vh - var(--header-footer-height));
+    overflow-x: hidden;
 }
 
 .container {
@@ -29,6 +30,7 @@
 
 .container .card-list {
     width: 100%;
+    margin-top: var(--standard-spacing);
 }
 
 .container .card-list .card-header {
@@ -40,8 +42,42 @@
     text-decoration: none;
 }
 
+.container .card-list .card .image {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+}
+
 .link {
     cursor: pointer;
+}
+
+.space-buffer {
+    height: 20vh;
+}
+
+.container .container-form {
+    margin-top: var(--standard-spacing);    
+    width: 100%;
+}
+
+.container .container-form input,
+.container .container-form textarea,
+.container .container-form button {
+    margin-bottom: var(--standard-spacing);
+    width: 100%;
+}
+
+
+.container .container-form label {
+    width: 98%; 
+    text-align: left;
+}
+
+.container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Navbar & Footer */
@@ -78,79 +114,4 @@
 .header-footer .icon img {
     height: 35px;
     width: 35px;
-}
-
-
-/* AppComponent */
-/* HomeComponent */
-/* ThankYouComponent */
-
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    margin: 0;
-}
-
-.center-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    
-}
-
-.large {
-    font-size: x-large;
-}
-
-/* ContactComponenet */
-.input-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input-form input,
-.input-form button {
-    margin-bottom: 10px;
-}
-
-.input-form label {
-    margin-top: 10px;
-    text-align: left;
-    width: 49%;
-}
-
-.input-form input {
-    width: 50%;
-}
-
-.input-form button {
-    width: 35%;
-}
-
-.input-form button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.contact-alert {
-    width: 50%;
-}
-
-
-/* AboutComponent */
-/* SharedCSS */
-/* FooterComponent */
-/* NavbarComponent */
-/* ProjectCardComponent */
-.image {
-    height: 100%;
-    width: 100%;
-    max-width: 300px;
-    max-height: 200px;
 }

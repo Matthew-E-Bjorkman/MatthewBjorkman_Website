@@ -28,14 +28,22 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       name: new FormControl(this.formData.name, [Validators.required]),
-      email: new FormControl(this.formData.email, [Validators.required, Validators.email]),
+      email: new FormControl(this.formData.email, [Validators.required]),
       message: new FormControl(this.formData.message, [Validators.required]),
-    }, {updateOn: 'blur'});
+    }, {updateOn: 'change'});
   }
 
   public submitContactForm(): void {
+    //Dynamically add the email validator so it doesn't block the submission button from enabling. 
+    this.form.controls["email"].addValidators(Validators.email);
+    this.form.controls["email"].updateValueAndValidity();
+
+    if (this.form.invalid) {
+      return;
+    }
+
     var url = this.appConfig.getConfig().FormSpreeURL;
-    
+
     var formDataPost = new FormData();
     formDataPost.append('name', this.form.controls['name'].value);
     formDataPost.append('email', this.form.controls['email'].value);
