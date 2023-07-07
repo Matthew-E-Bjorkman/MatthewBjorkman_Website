@@ -60,6 +60,7 @@
 .container .container-form {
     margin-top: var(--standard-spacing);    
     width: 100%;
+    max-width: 500px;
 }
 
 .container .container-form input,
