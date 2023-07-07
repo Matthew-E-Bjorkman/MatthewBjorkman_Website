@@ -54,7 +54,38 @@
                 />
                 <hr />
                 <app-project-card
-                    projDesc="To be filled out in the near future."
+                    imgPath="/assets/images/PaymentProcessors.png"
+                    projDate="2021 & 2023"
+                    projName="Payment Processor Integrations"
+                    projDesc="Over my professional career I've spent a lot of time working in the FinTech space. 
+                            As a developer this mostly manifests in the implementation and integration with various payment processors into our native systems and workflows.
+                            My experience also goes beyond the basics of Credit Card, ACH, and the American market. 
+                            I've worked on systems in other countries such as Canada, Austria, and Germany while supporting many of their unique payment methods. 
+                            Some examples are Local Payment Methods (E.g. SEPA) and Pre-Authorized Debit."
+                />
+                <hr />
+                <app-project-card
+                    imgPath="/assets/images/DBUp.png"
+                    projDate="2022"
+                    projName="Database Migration Automation"
+                    projDesc="In order to shore up a largely manual CI/CD process, 
+                            a project I was able to undertake was migrating a largely manual SQL migration process to an automated system utilizing DBUp.
+                            This system was integrated with our deployment tool to, on a deployment, handle the SQL migration from the old build to the new version.
+                            There were 2 main workflows for this process. The first was to parse through developer-written scripts, 
+                            identify if their content has been ran against that environment's database server, and if not execute and log the script. 
+                            An html report with the outcome of this process was also generated and sent to stakeholders via an email API integration.
+                            The other workflow was to take these same scripts and condense them down to a single manifest script that would represent 
+                            the total delta between the existing state of the database schema and shared data and that of the build being deployed."
+                />
+                <hr />
+                <app-project-card
+                    imgPath="/assets/images/Postman.jpg"
+                    projDate="2022"
+                    projName="Postman E2E Automated Testing Suite"
+                    projDesc="In an effort to improve automated testing of the code base, I had to chance to develop an automated test suite for our public-facing API suite.
+                            At the start of the project we had no testing of this code area sans some manual QA test cases. To combat this, 
+                            I instantiated a new Postman collection holding a request object for every api endpoint in our suite. Each request had variables and sample bodies corresponding to the request properties accepted by the API. 
+                            By combining this with multiple environments, javascript-driven Postman Monitor test cases, and internal training seasons and guidance I was able to help us launch a fully automated API E2E test suite."
                 />
             </div>
           </div>

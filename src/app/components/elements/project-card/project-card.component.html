@@ -16,9 +16,9 @@
 <div *ngIf="!headerRow" class="row">
     <div class="col-sm">
         <div *ngIf="projName">
-            {{projName}} 
+            <strong>{{projName}}</strong>
             <br />
-            {{projDate}}
+            <i>{{projDate}}</i>
         </div>
         <a *ngIf="projGitLink" href="{{projGitLink}}" target="_blank">
             GitHub Link
@@ -27,11 +27,6 @@
         <a *ngIf="projFile" href="{{projFile}}" >
             Download the Project
         </a>
-        <div *ngIf="!projGitLink">
-            <div *ngIf="projName">
-                {{projName}} ({{projDate}})
-            </div>
-        </div>
     </div>
     <div class="col-sm">
         {{projDesc}}
